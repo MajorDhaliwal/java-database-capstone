@@ -13,11 +13,7 @@ _As a [user role], I want [feature/goal], so that [reason]._
 **Notes:**
 - [Additional information or edge cases]
 
-- (Admin)
-
-
-
-
+## Admin User Stories
 User Story 1
 
 
@@ -398,9 +394,7 @@ Procedure returns appointment count grouped by month
 
 
 
-
-(Patient)
-
+## Patient User Stories
 
 User Story 1
 
@@ -831,7 +825,7 @@ Each entry includes doctor name, time, and location
 
 
 
-(Doctor)
+## Docter User Stories
 
 
 User Story 1
