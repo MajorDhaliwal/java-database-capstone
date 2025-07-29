@@ -21,11 +21,13 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
     /**
      * Retrieves appointments for a doctor within a time range, including doctor and availability info.
      */
-    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.doctor d LEFT JOIN FETCH d.availabilities " +
-           "WHERE d.id = :doctorId AND a.appointmentTime BETWEEN :start AND :end")
-    List<Appointment> findByDoctorIdAndAppointmentTimeBetween(@Param("doctorId") Long doctorId,
-                                                              @Param("start") LocalDateTime start,
-                                                              @Param("end") LocalDateTime end);
+@Query("SELECT a FROM Appointment a JOIN a.doctor d WHERE d.id = :doctorId AND a.appointmentTime BETWEEN :start AND :end")
+List<Appointment> findByDoctorIdAndAppointmentTimeBetween(
+    @Param("doctorId") Long doctorId,
+    @Param("start") LocalDateTime start,
+    @Param("end") LocalDateTime end
+);
+
 
     /**
      * Filters appointments by doctor ID, partial patient name (case-insensitive), and time range.
