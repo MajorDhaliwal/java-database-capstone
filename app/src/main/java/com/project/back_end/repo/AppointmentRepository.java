@@ -1,6 +1,6 @@
 package com.project.back_end.repo;
 
-import com.project.back_end.model.Appointment;
+import com.project.back_end.models.Appointment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -80,4 +80,9 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
     List<Appointment> filterByDoctorNameAndPatientIdAndStatus(@Param("doctorName") String doctorName,
                                                               @Param("patientId") Long patientId,
                                                               @Param("status") int status);
+
+
+                                                                  @Modifying
+    @Query("UPDATE Appointment a SET a.status = :status WHERE a.id = :id")
+    void updateStatus(int status,long id);
 }
