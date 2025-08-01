@@ -14,12 +14,12 @@ public class Login {
     }
 
     // Getter for identifier
-    public String getIdentifier() {
+    public String getEmail() {
         return identifier;
     }
 
     // Setter for identifier
-    public void setIdentifier(String identifier) {
+    public void setEmail(String identifier) {
         this.identifier = identifier;
     }
 
