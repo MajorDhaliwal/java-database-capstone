@@ -32,6 +32,51 @@ As an admin, I want to generate a monthly performance report, so that I can revi
 
 ---
 
+### Title:
+As an admin, I want to view a log of recent user actions, so that I can monitor activity and troubleshoot issues.
+
+**Acceptance Criteria:**
+- Logs show user type, action, timestamp
+- Searchable and filterable by user or date
+- Entries are read-only
+
+**Priority:** Medium
+**Story Points:** 3
+**Notes:**
+- Include login, profile updates, and appointment changes
+
+---
+
+### Title:
+As an admin, I want to deactivate user accounts, so that inactive users no longer access the system.
+
+**Acceptance Criteria:**
+- Admin can toggle user active/inactive status
+- Inactive users are blocked from login
+- Action is reversible
+
+**Priority:** High
+**Story Points:** 2
+**Notes:**
+- Display reason for deactivation
+
+---
+
+### Title:
+As an admin, I want to assign roles to users, so that permissions are enforced throughout the system.
+
+**Acceptance Criteria:**
+- Admin can assign roles like doctor, patient, or admin
+- UI reflects role-specific features
+- Changes take effect immediately
+
+**Priority:** High
+**Story Points:** 3
+**Notes:**
+- Use role-based access control (RBAC)
+
+---
+
 ## Patient User Stories
 
 ### Title:
@@ -64,6 +109,51 @@ As a patient, I want to receive SMS reminders, so that I don't forget my upcomin
 
 ---
 
+### Title:
+As a patient, I want to cancel an appointment, so that I can free up the slot if I can't attend.
+
+**Acceptance Criteria:**
+- Cancellation option available on dashboard
+- Confirmation required before cancelling
+- Cancelled status is saved in system
+
+**Priority:** Medium
+**Story Points:** 2
+**Notes:**
+- Send cancellation email to doctor
+
+---
+
+### Title:
+As a patient, I want to update my contact details, so that the clinic can reach me if needed.
+
+**Acceptance Criteria:**
+- Editable profile form for phone and email
+- Form validates inputs
+- Data saved to backend
+
+**Priority:** High
+**Story Points:** 2
+**Notes:**
+- Audit changes to contact info
+
+---
+
+### Title:
+As a patient, I want to provide feedback after appointments, so that I can help improve the service.
+
+**Acceptance Criteria:**
+- Feedback form appears after appointment is marked completed
+- Rating and comment fields included
+- Doctor does not see feedback directly
+
+**Priority:** Medium
+**Story Points:** 3
+**Notes:**
+- Use feedback for reporting and quality checks
+
+---
+
 ## Doctor User Stories
 
 ### Title:
@@ -93,6 +183,51 @@ As a doctor, I want to filter appointments by status, so that I can quickly view
 **Story Points:** 2
 **Notes:**
 - Improve UX with clear status badges
+
+---
+
+### Title:
+As a doctor, I want to send post-visit instructions to patients, so that they follow up properly.
+
+**Acceptance Criteria:**
+- Text input for visit instructions
+- Patient receives notification
+- Instructions stored with appointment record
+
+**Priority:** High
+**Story Points:** 3
+**Notes:**
+- Allow updates within 24 hours
+
+---
+
+### Title:
+As a doctor, I want to search my past appointments, so that I can review case history.
+
+**Acceptance Criteria:**
+- Search by patient name, date, or status
+- Results show appointment and summary
+- Access restricted to own patients
+
+**Priority:** Medium
+**Story Points:** 3
+**Notes:**
+- Optimize queries for performance
+
+---
+
+### Title:
+As a doctor, I want to download patient reports, so that I can refer offline if needed.
+
+**Acceptance Criteria:**
+- Download button on patient profile
+- Report includes medical history and appointments
+- Available in PDF format
+
+**Priority:** Low
+**Story Points:** 2
+**Notes:**
+- Secure download with access logging
 
 ---
 
