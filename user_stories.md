@@ -1,4 +1,4 @@
-# New User Stories
+# User Stories
 
 ## Admin User Stories
 
